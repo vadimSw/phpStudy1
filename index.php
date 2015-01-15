@@ -2,7 +2,7 @@
 require 'linc.inc.php';
 require 'data.inc.php';
 
-$title = 'Site nachej scool';
+$title = 'Site nachej scool фыволдф вфыв фы';
 $header = "$welcome, gost";
 $id = strtolower(trim(strip_tags($_GET['id'])));
 switch($id){
