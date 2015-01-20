@@ -24,10 +24,10 @@ $n2 = (int)trim(strip_tags($_POST['num']));
 $a = 55 - $_POST['num'];
 $b = 60 - $_POST['num'];
  if ($_POST['browser'] == 'Women'){
- 	echo "Respected Women, " . "do penzii vam ostalos: " . $a;
+ 	echo "Respected Women, " . $_POST['name'] . ", do penzii vam ostalos: " . $a . "age.";
  }
  	else 
- 		echo "Respected Men, " . "do penzii vam ostalos: " . $b;
+ 		echo "Respected Men, " . $_POST['name'] . ", do penzii vam ostalos: " . $b . "age.";
 
 }
 
