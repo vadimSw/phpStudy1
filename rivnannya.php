@@ -59,8 +59,8 @@ $y = $two * $two;
 $x = 2 * $one;
 $z = $y - 4 * $one * $free;
 $d = sqrt($z);
-	$x1 = -$two + $d / $x;
-	$x2 = -$two - $d / $x;
+	$x1 = (-$two + $d) / $x;
+	$x2 = (-$two - $d) / $x;
 	echo "x1 = " . $x1 . ", x2 = " . $x2;
 
 ?>
