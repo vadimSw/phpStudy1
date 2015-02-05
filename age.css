@@ -1,0 +1,21 @@
+.form {
+ 	color:#505050;
+ }
+
+.name {
+ 	width: 80px;
+ }
+
+ input {
+ 	border-radius: 4px;
+ 	width: 30px;
+ 	border: 1px solid #666666;
+ }
+
+ .input {
+ 	width: 50px;
+ }
+
+p {
+	color:  #505050;
+}
