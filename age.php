@@ -60,7 +60,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 }
 
 // функція в яку потрібно передавати номер місяця а вона буде вертати скількі днів в місяці
-		switch ($two){
+	function month($month){
+		switch ($month){
 			case 1: $d='31'; break;
 			case 2: $d='28'; break;
 			case 3: $d='31'; break;
@@ -74,6 +75,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			case 11: $d='30'; break;
 			case 12: $d='31'; break;
 			}
+			echo $d . ' day<br>';
+	}
+	echo month(2);
 
 // високосний це рік чи ні
 function isleap($year){
@@ -85,4 +89,7 @@ function isleap($year){
         echo 'Год не високосный';
 }
 echo isleap(2016);
+
+
+
 ?>
