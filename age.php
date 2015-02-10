@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="age.css">
+﻿<link rel="stylesheet" type="text/css" href="age.css">
 
 <p>Vvedit daty Vachogo narodzennja i imja!</p>
 <form action='age.php' method= 'post' class="form">
@@ -30,12 +30,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 	elseif ($one <= 31 && $two <= 12){
 
-		$today3 = date("Y");
-		$x = $today3 - $free;
-		$today2 = date("m");
-		$y = $today2 - $two;
-		$today1 = date("d");
-		$z = $today1 - $one;
+		$today1 = date("Y");
+		$x = $today1 - $free;
+		// $today2 = date("m");
+		// $y = $today2 - $two;
+		// $today1 = date("d");
+		// $z = $today1 - $one;
+
 		$day = (30 - $one) + ((12 - $two) * 31) + ($x * 365);
 		switch ($two){
 			case 1: $m='January'; break;
@@ -51,8 +52,37 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			case 11: $m='November'; break;
 			case 12: $m='December'; break;
 			}
+			
 		echo "<p>" . $name . ", Vu narodylysja " . $one . " " . $m . " " . $free . " roky i progili " . $day . " dniv." . "</p><br>";
+
 	}
 
 }
+
+// функція в яку потрібно передавати номер місяця а вона буде вертати скількі днів в місяці
+		switch ($two){
+			case 1: $d='31'; break;
+			case 2: $d='28'; break;
+			case 3: $d='31'; break;
+			case 4: $d='30'; break;
+			case 5: $d='31'; break;
+			case 6: $d='30'; break;
+			case 7: $d='31'; break;
+			case 8: $d='31'; break;
+			case 9: $d='30'; break;
+			case 10: $d='31'; break;
+			case 11: $d='30'; break;
+			case 12: $d='31'; break;
+			}
+
+// високосний це рік чи ні
+function isleap($year){
+    if( $year % 4 == 0 )
+        # Год високосный
+        echo 'Год високосный';
+    else
+        # Год не високосный
+        echo 'Год не високосный';
+}
+echo isleap(2016);
 ?>
